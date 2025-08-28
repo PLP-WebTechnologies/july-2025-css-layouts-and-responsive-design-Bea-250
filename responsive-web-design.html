@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANDAR</title>
+    <style>
+        /* ===========================
+           Reset and base styles
+        =========================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Lucida sans, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ===========================
+           Header
+        =========================== */
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* ===========================
+           Navigation Bar (Flexbox)
+        =========================== */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #FFD700;
+            flex-wrap: wrap;
+            padding: 0.5rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0.5rem 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #003366;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #888;
+        }
+
+        /* ===========================
+           Main Layout (Grid)
+        =========================== */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* content + sidebar */
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        /* ===========================
+           Content Area
+        =========================== */
+        .content {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        /* ===========================
+           Flexbox Cards inside content
+        =========================== */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background-color: #eee;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* ===========================
+           Sidebar
+        =========================== */
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        /* ===========================
+           Footer
+        =========================== */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* ===========================
+           Media Queries
+        =========================== */
+        /* Tablet */
+        @media (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Bandar</h1>
+    </header>
+
+    <!-- Navigation Bar using Flexbox -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main content area using Grid -->
+    <main class="grid-container">
+        <!-- Main content -->
+        <section class="content">
+            <h2>Katiba Day</h2>
+            <p> Highlights of the Katiba day dated 27th August 2025.</p>
+
+            <!-- Flexbox Cards -->
+            <div class="cards">
+                <div class="card">
+                    <h3>KATIBA</h3>
+                    <p>Katiba in English is Constitution.</p>
+                </div>
+                <div class="card">
+                    <h3>Day for Katiba</h3>
+                    <p>Day for Katiba is 27th August.</p>
+                </div>
+                <div class="card">
+                    <h3>Officiant</h3>
+                    <p>The President.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Highlights</h2>
+            <p>Follow Bandar for more information on Katiba day.</p>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Bandar</p>
+    </footer>
+
+</body>
+</html>
